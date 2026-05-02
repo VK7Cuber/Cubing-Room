@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pattern">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:weightSum="100"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|start"
+            android:layout_marginEnd="5dp">
+
+            <ImageButton
+                android:id="@+id/return_to_main_window_button"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/return_to_main_window_button_image_description"
+                app:srcCompat="@drawable/twotone_arrow_back_24" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/windowName"
+            style="@style/WindowTitleText"
+            android:layout_weight="10"
+            android:text="@string/solving_window_title" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
+
+        <TextView
+            android:id="@+id/choosing_solving_method_label"
+            style="@style/basicText"
+            android:layout_weight="7"
+            android:text="@string/choosing_solving_method_label_text" />
+
+        <Spinner
+            android:id="@+id/choosing_solving_method_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:spinnerMode="dropdown" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6" />
+
+        <TextView
+            android:id="@+id/setting_the_speed_of_motors_label"
+            style="@style/basicText"
+            android:layout_weight="7"
+            android:text="@string/setting_the_speed_of_motors_label_text" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="0dp"
+            android:layout_weight="10">
+
+            <SeekBar
+                android:id="@+id/settingSpeedOfMotorsSeekBar"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="wrap_content"
+                android:min="1"
+                android:max="100"
+                android:progress="90"
+                android:progressTint="@color/blue"
+                android:progressBackgroundTint="@color/black"/>
+
+            <TextView
+                android:id="@+id/motors_speed_label"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="20" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/start_solving_button"
+            style="@style/MainButtonStyle"
+            android:layout_weight="10"
+            android:text="@string/start_solving_button_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/open_solving_history_button"
+            style="@style/MainButtonStyle"
+            android:textSize="18sp"
+            android:layout_weight="7"
+            android:text="@string/open_solving_history_button_text" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

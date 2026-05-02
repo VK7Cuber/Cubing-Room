@@ -1,5 +1,6 @@
 package com.example.cubing_room;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -41,7 +42,9 @@ public class MainActivity extends AppCompatActivity {
         solvingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Сбоорка", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, SolvingWindowActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

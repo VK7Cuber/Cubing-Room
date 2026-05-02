@@ -60,7 +60,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/solving_button"
                 style="@style/MainButtonStyle"
-                android:text="@string/solving_button_text" />
+                android:text="@string/solving_window_title" />
 
             <Space
                 android:layout_width="match_parent"
@@ -70,7 +70,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/scramble_button"
                 style="@style/MainButtonStyle"
-                android:text="@string/scramble_button_text" />
+                android:text="@string/scramble_window_title" />
 
             <Space
                 android:layout_width="match_parent"
@@ -80,7 +80,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/work_with_cube_button"
                 style="@style/MainButtonStyle"
-                android:text="@string/work_with_cube_button_text" />
+                android:text="@string/work_with_cube_window_title" />
 
             <Space
                 android:layout_width="match_parent"
@@ -90,7 +90,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/work_with_robot_button"
                 style="@style/MainButtonStyle"
-                android:text="@string/work_with_robot_button_text" />
+                android:text="@string/work_with_robot_window_title" />
 
             <Space
                 android:layout_width="match_parent"

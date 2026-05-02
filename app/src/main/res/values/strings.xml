@@ -3,8 +3,13 @@
     <string name="icon_image_description">Логотип приложения</string>
     <string name="logo_image_description">Логотип приложения с надписью</string>
     <string name="settings_button_image_description">Настройки приложения</string>
-    <string name="solving_button_text">Сборка</string>
-    <string name="scramble_button_text">Скрамбл</string>
-    <string name="work_with_cube_button_text">Работа с кубиком</string>
-    <string name="work_with_robot_button_text">Робот</string>
+    <string name="return_to_main_window_button_image_description">Выход в главное меню</string>
+    <string name="solving_window_title">Сборка</string>
+    <string name="scramble_window_title">Скрамбл</string>
+    <string name="work_with_cube_window_title">Работа с кубиком</string>
+    <string name="work_with_robot_window_title">Робот</string>
+    <string name="choosing_solving_method_label_text">Метод сборки:</string>
+    <string name="setting_the_speed_of_motors_label_text">Скорость вращения моторов:</string>
+    <string name="start_solving_button_text">Собрать</string>
+    <string name="open_solving_history_button_text">История сборок</string>
 </resources>
