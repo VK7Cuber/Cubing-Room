@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Cubing-Room</string>
+    <string name="app_name">Cubing Room</string>
+    <string name="icon_image_description">Логотип приложения</string>
+    <string name="logo_image_description">Логотип приложения с надписью</string>
+    <string name="settings_button_image_description">Настройки приложения</string>
+    <string name="solving_button_text">Сборка</string>
+    <string name="scramble_button_text">Скрамбл</string>
+    <string name="work_with_cube_button_text">Работа с кубиком</string>
+    <string name="work_with_robot_button_text">Робот</string>
 </resources>
