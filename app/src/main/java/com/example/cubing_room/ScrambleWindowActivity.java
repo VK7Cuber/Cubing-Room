@@ -1,5 +1,6 @@
 package com.example.cubing_room;
 
+import android.annotation.SuppressLint;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
 import android.content.Intent;
@@ -14,41 +15,45 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SolvingWindowActivity extends AppCompatActivity {
+public class ScrambleWindowActivity extends AppCompatActivity {
 
     private ImageButton returnToMainWindowButton;
-    private Button openSolvingHistoryButton;
-    private Button startSolvingButton;
-    private Spinner methodsOfSolvingSpinner;
+    private Button generateScramblesButton;
+    private Button startScrambleButton;
     private SeekBar settingMotorsSpeedSeekBar;
     private TextView motorsSpeedLabel;
 
     private Integer speedOfMotors;
+    private RadioEditGroup radioEditGroup;
+
+    RubiksCube cube;
 
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.solving_window);
+        setContentView(R.layout.scramble_window);
 
         returnToMainWindowButton = findViewById(R.id.return_to_main_window_button);
-        startSolvingButton = findViewById(R.id.start_solving_button);
-        openSolvingHistoryButton = findViewById(R.id.open_solving_history_button);
-        methodsOfSolvingSpinner = findViewById(R.id.choosing_solving_method_spinner);
+        startScrambleButton = findViewById(R.id.start_scramble_button);
+        generateScramblesButton = findViewById(R.id.generate_scrambles_button);
         settingMotorsSpeedSeekBar = findViewById(R.id.setting_speed_of_motors_seek_bar);
 
         motorsSpeedLabel = findViewById(R.id.motors_speed_label);
         speedOfMotors = settingMotorsSpeedSeekBar.getProgress();
-        motorsSpeedLabel.setText(speedOfMotors+ "%");
+        motorsSpeedLabel.setText(speedOfMotors + "%");
 
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-                this,
-                R.array.solving_methods,
-                android.R.layout.simple_spinner_item
-        );
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        methodsOfSolvingSpinner.setAdapter(adapter);
+        radioEditGroup = new RadioEditGroup();
+
+        radioEditGroup.addRadioEdit(findViewById(R.id.scramble_1_radio_edit));
+        radioEditGroup.addRadioEdit(findViewById(R.id.scramble_2_radio_edit));
+        radioEditGroup.addRadioEdit(findViewById(R.id.scramble_3_radio_edit));
+        radioEditGroup.addRadioEdit(findViewById(R.id.scramble_4_radio_edit));
+        radioEditGroup.addRadioEdit(findViewById(R.id.scramble_5_radio_edit));
+
+        cube = new RubiksCube();
 
         setListeners();
     }
@@ -57,27 +62,31 @@ public class SolvingWindowActivity extends AppCompatActivity {
         returnToMainWindowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(SolvingWindowActivity.this, MainActivity.class);
+                Intent intent = new Intent(ScrambleWindowActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
 
-        startSolvingButton.setOnClickListener(new View.OnClickListener() {
+        startScrambleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SolvingWindowActivity.this, "Сборка начата", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ScrambleWindowActivity.this, "Сборка начата", Toast.LENGTH_SHORT).show();
             }
         });
 
-        openSolvingHistoryButton.setOnClickListener(new View.OnClickListener() {
+        generateScramblesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(SolvingWindowActivity.this, "История сборок", Toast.LENGTH_SHORT).show();
+                for (int i = 0; i < radioEditGroup.getGroupSize(); i++){
+                    String scramble = cube.generateScramble();
+                    radioEditGroup.setText(scramble, i);
+                }
             }
         });
 
         settingMotorsSpeedSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @SuppressLint("SetTextI18n")
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 motorsSpeedLabel.setText(progress + "%");
@@ -94,6 +103,7 @@ public class SolvingWindowActivity extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     protected void onStart(){

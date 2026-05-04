@@ -26,6 +26,10 @@
         <activity
             android:name=".SolvingWindowActivity"
             android:exported="false"/>
+
+        <activity
+            android:name=".ScrambleWindowActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>

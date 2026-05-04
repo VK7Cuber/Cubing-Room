@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
         scrambleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Скрамбл", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, ScrambleWindowActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 

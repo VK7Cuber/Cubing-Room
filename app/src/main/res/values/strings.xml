@@ -11,5 +11,12 @@
     <string name="choosing_solving_method_label_text">Метод сборки:</string>
     <string name="setting_the_speed_of_motors_label_text">Скорость вращения моторов:</string>
     <string name="start_solving_button_text">Собрать</string>
+    <string name="start_scramble_button_text">Разобрать</string>
     <string name="open_solving_history_button_text">История сборок</string>
+    <string name="scramble_1_hint">Скрамбл 1</string>
+    <string name="scramble_2_hint">Скрамбл 2</string>
+    <string name="scramble_3_hint">Скрамбл 3</string>
+    <string name="scramble_4_hint">Скрамбл 4</string>
+    <string name="scramble_5_hint">Скрамбл 5</string>
+    <string name="generate_scrambles_button_text">Сгенерировать скрамблы</string>
 </resources>

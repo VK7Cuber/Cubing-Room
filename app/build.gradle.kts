@@ -31,6 +31,23 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    packagingOptions {
+        resources.excludes.addAll(listOf(
+            "META-INF/INDEX.LIST",
+            "META-INF/io.netty.versions.properties",
+            "META-INF/DEPENDENCIES",
+            "META-INF/LICENSE",
+            "META-INF/LICENSE.txt",
+            "META-INF/license.txt",
+            "META-INF/NOTICE",
+            "META-INF/NOTICE.txt",
+            "META-INF/notice.txt",
+            "META-INF/*.SF",
+            "META-INF/*.DSA",
+            "META-INF/*.RSA"
+        ))
+    }
 }
 
 dependencies {
@@ -41,4 +58,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    implementation("org.worldcubeassociation.tnoodle:lib-scrambles:0.19.0")
 }
