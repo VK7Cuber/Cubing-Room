@@ -11,35 +11,35 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton settingsButton;
-    private Button solvingButton;
-    private Button scrambleButton;
-    private Button workingWithCubeButton;
-    private Button workingWithRobotButton;
+    private ImageButton openSettingWindowButton;
+    private Button openSolvingWindowButton;
+    private Button openScrambleWindowButton;
+    private Button openTrainingWindowButton;
+    private Button openEntertainmentsWindowButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        settingsButton = findViewById(R.id.settings_button);
-        solvingButton = findViewById(R.id.solving_button);
-        scrambleButton = findViewById(R.id.scramble_button);
-        workingWithCubeButton = findViewById(R.id.work_with_cube_button);
-        workingWithRobotButton = findViewById(R.id.work_with_robot_button);
+        openSettingWindowButton = findViewById(R.id.open_settings_window_button);
+        openSolvingWindowButton = findViewById(R.id.open_solving_window_button);
+        openScrambleWindowButton = findViewById(R.id.open_scramble_window_button);
+        openTrainingWindowButton = findViewById(R.id.open_training_window_button);
+        openEntertainmentsWindowButton = findViewById(R.id.open_entertainments_window_button);
 
         setButtonListeners();
     }
 
     private void setButtonListeners(){
-        settingsButton.setOnClickListener(new View.OnClickListener() {
+        openSettingWindowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Настройки", Toast.LENGTH_SHORT).show();
             }
         });
 
-        solvingButton.setOnClickListener(new View.OnClickListener() {
+        openSolvingWindowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SolvingWindowActivity.class);
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        scrambleButton.setOnClickListener(new View.OnClickListener() {
+        openScrambleWindowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ScrambleWindowActivity.class);
@@ -57,17 +57,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        workingWithCubeButton.setOnClickListener(new View.OnClickListener() {
+        openTrainingWindowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Работа с кубиком", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Обучение", Toast.LENGTH_SHORT).show();
             }
         });
 
-        workingWithRobotButton.setOnClickListener(new View.OnClickListener() {
+        openEntertainmentsWindowButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Работа с роботом", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, EntertainmentsWindowActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

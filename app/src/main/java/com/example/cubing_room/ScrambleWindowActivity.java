@@ -78,10 +78,13 @@ public class ScrambleWindowActivity extends AppCompatActivity {
         generateScramblesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String generateScramblesButtonText = generateScramblesButton.getText().toString();
+                generateScramblesButton.setText("Генерация...");
                 for (int i = 0; i < radioEditGroup.getGroupSize(); i++){
                     String scramble = cube.generateScramble();
                     radioEditGroup.setText(scramble, i);
                 }
+                generateScramblesButton.setText(generateScramblesButtonText);
             }
         });
 

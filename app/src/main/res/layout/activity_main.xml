@@ -25,7 +25,7 @@
             android:layout_marginEnd="5dp">
 
             <ImageButton
-                android:id="@+id/settings_button"
+                android:id="@+id/open_settings_window_button"
                 android:layout_width="48dp"
                 android:layout_height="match_parent"
                 android:background="?attr/selectableItemBackgroundBorderless"
@@ -58,7 +58,7 @@
             android:layout_marginBottom="15dp">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/solving_button"
+                android:id="@+id/open_solving_window_button"
                 style="@style/MainButtonStyle"
                 android:text="@string/solving_window_title" />
 
@@ -68,7 +68,7 @@
                 android:layout_weight="1" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/scramble_button"
+                android:id="@+id/open_scramble_window_button"
                 style="@style/MainButtonStyle"
                 android:text="@string/scramble_window_title" />
 
@@ -78,9 +78,9 @@
                 android:layout_weight="1" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/work_with_cube_button"
+                android:id="@+id/open_training_window_button"
                 style="@style/MainButtonStyle"
-                android:text="@string/work_with_cube_window_title" />
+                android:text="@string/training_window_title" />
 
             <Space
                 android:layout_width="match_parent"
@@ -88,9 +88,9 @@
                 android:layout_weight="1" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/work_with_robot_button"
+                android:id="@+id/open_entertainments_window_button"
                 style="@style/MainButtonStyle"
-                android:text="@string/work_with_robot_window_title" />
+                android:text="@string/entertainments_window_title" />
 
             <Space
                 android:layout_width="match_parent"

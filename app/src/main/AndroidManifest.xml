@@ -30,6 +30,10 @@
         <activity
             android:name=".ScrambleWindowActivity"
             android:exported="false"/>
+
+        <activity
+            android:name=".EntertainmentsWindowActivity"
+            android:exported="false"/>
     </application>
 
 </manifest>

@@ -28,4 +28,23 @@
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_width">match_parent</item>
     </style>
+
+
+    <style name="entertainmentsButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">10</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/main_text_semi_bold</item>
+
+        <item name="backgroundTint">@null</item>
+        <item name="strokeColor">@color/black</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">20dp</item>
+
+        <item name="android:gravity">end|top</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+    </style>
 </resources>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pattern">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:weightSum="100"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|start"
+            android:layout_marginEnd="5dp">
+
+            <ImageButton
+                android:id="@+id/return_to_main_window_button"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/return_to_main_window_button_image_description"
+                app:srcCompat="@drawable/twotone_arrow_back_24" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/windowName"
+            style="@style/WindowTitleText"
+            android:layout_weight="10"
+            android:text="@string/entertainments_window_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="26"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                style="@style/entertainmentsButton"
+                android:id="@+id/open_patterns_window_button"
+                android:text="@string/patterns_window_title"
+                android:background="@drawable/blue_gradient_button"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+
+            <Button
+                style="@style/entertainmentsButton"
+                android:id="@+id/open_timer_window_button"
+                android:background="@drawable/orange_gradient_button"
+                android:text="@string/timer_window_title"/>
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="26"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                style="@style/entertainmentsButton"
+                android:id="@+id/open_battle_window_button"
+                android:text="@string/battle_window_title"
+                android:background="@drawable/red_gradient_button"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+
+            <Button
+                style="@style/entertainmentsButton"
+                android:id="@+id/open_pictures_window_button"
+                android:background="@drawable/green_gradient_button"
+                android:text="@string/pictures_window_title"/>
+
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="26"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <Button
+                style="@style/entertainmentsButton"
+                android:id="@+id/open_controller_window_button"
+                android:text="@string/controller_window_title"
+                android:background="@drawable/yellow_gradient_button"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="11"
+                android:layout_height="match_parent"/>
+
+<!--            <Button-->
+<!--                style="@style/entertainmentsButton"-->
+<!--                android:background="@drawable/yellow_gradient_button"-->
+<!--                android:text="@string/controller_window_title"/>-->
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

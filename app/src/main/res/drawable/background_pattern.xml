@@ -8,7 +8,7 @@
 
     <item>
         <bitmap
-            android:src="@drawable/cubing_room_background"
+            android:src="@drawable/cubing_room_background_mini"
             android:tileMode="repeat" />
     </item>
 </layer-list>
