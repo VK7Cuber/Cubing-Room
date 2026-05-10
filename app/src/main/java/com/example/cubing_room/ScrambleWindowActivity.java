@@ -26,9 +26,6 @@ public class ScrambleWindowActivity extends AppCompatActivity {
     private Integer speedOfMotors;
     private RadioEditGroup radioEditGroup;
 
-    RubiksCube cube;
-
-
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -52,8 +49,6 @@ public class ScrambleWindowActivity extends AppCompatActivity {
         radioEditGroup.addRadioEdit(findViewById(R.id.scramble_3_radio_edit));
         radioEditGroup.addRadioEdit(findViewById(R.id.scramble_4_radio_edit));
         radioEditGroup.addRadioEdit(findViewById(R.id.scramble_5_radio_edit));
-
-        cube = new RubiksCube();
 
         setListeners();
     }
@@ -81,7 +76,7 @@ public class ScrambleWindowActivity extends AppCompatActivity {
                 String generateScramblesButtonText = generateScramblesButton.getText().toString();
                 generateScramblesButton.setText("Генерация...");
                 for (int i = 0; i < radioEditGroup.getGroupSize(); i++){
-                    String scramble = cube.generateScramble();
+                    String scramble = RubiksCube.getInstance().generateScramble();
                     radioEditGroup.setText(scramble, i);
                 }
                 generateScramblesButton.setText(generateScramblesButtonText);

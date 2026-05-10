@@ -58,6 +58,11 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+//    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
     implementation("org.worldcubeassociation.tnoodle:lib-scrambles:0.19.0")
+    implementation("org.worldcubeassociation.tnoodle:scrambler-min2phase:0.19.0") {
+        isTransitive = false
+    }
+
 }
