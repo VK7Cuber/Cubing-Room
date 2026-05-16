@@ -118,6 +118,7 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/generate_scrambles_button"
             style="@style/MainButtonStyle"
+            android:textSize="18sp"
             android:layout_weight="8"
             android:text="@string/generate_scrambles_button_text" />
 

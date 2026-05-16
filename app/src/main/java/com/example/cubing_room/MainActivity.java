@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageButton openSettingWindowButton;
+    //private ImageButton openSettingWindowButton;
     private Button openSolvingWindowButton;
     private Button openScrambleWindowButton;
     private Button openTrainingWindowButton;
@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        openSettingWindowButton = findViewById(R.id.open_settings_window_button);
+        // openSettingWindowButton = findViewById(R.id.open_settings_window_button);
         openSolvingWindowButton = findViewById(R.id.open_solving_window_button);
         openScrambleWindowButton = findViewById(R.id.open_scramble_window_button);
         openTrainingWindowButton = findViewById(R.id.open_training_window_button);
@@ -32,12 +32,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setButtonListeners(){
-        openSettingWindowButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Настройки", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        openSettingWindowButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(MainActivity.this, "Настройки", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
         openSolvingWindowButton.setOnClickListener(new View.OnClickListener() {
             @Override
